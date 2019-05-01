@@ -1,6 +1,10 @@
 package me.yuri.oosedea.rest;
 
+import me.yuri.oosedea.exceptions.UnauthorizedUserException;
+import me.yuri.oosedea.rest.dto.LoginRequest;
+import me.yuri.oosedea.rest.dto.LoginResponse;
 import me.yuri.oosedea.service.LoginService;
+import me.yuri.oosedea.service.mo.User;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -19,8 +23,15 @@ public class LoginController {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response login(String user, String password) {
-        return Response.ok().build();
+    public Response login(LoginRequest loginRequest) {
+        LoginResponse loginResponse = new LoginResponse();
+        if (loginService.authorized(loginRequest.getUser(), loginRequest.getPassword())) {
+            loginResponse.setToken("");
+            loginResponse.setUser(loginRequest.getUser());
+            return Response.ok(loginResponse).build();
+        } else {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+        }
     }
 
 }
