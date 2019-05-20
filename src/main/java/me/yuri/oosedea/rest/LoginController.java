@@ -1,10 +1,8 @@
 package me.yuri.oosedea.rest;
 
-import me.yuri.oosedea.exceptions.UnauthorizedUserException;
 import me.yuri.oosedea.rest.dto.LoginRequest;
 import me.yuri.oosedea.rest.dto.LoginResponse;
 import me.yuri.oosedea.service.LoginService;
-import me.yuri.oosedea.service.mo.User;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -26,12 +24,11 @@ public class LoginController {
     public Response login(LoginRequest loginRequest) {
         LoginResponse loginResponse = new LoginResponse();
         if (loginService.authorized(loginRequest.getUser(), loginRequest.getPassword())) {
-            loginResponse.setToken("");
+            loginResponse.setToken();
             loginResponse.setUser(loginRequest.getUser());
             return Response.ok(loginResponse).build();
         } else {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         }
     }
-
 }
