@@ -22,10 +22,8 @@ public class LoginController {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(LoginRequest loginRequest) {
-        LoginResponse loginResponse = new LoginResponse();
         if (loginService.authorized(loginRequest.getUser(), loginRequest.getPassword())) {
-            loginResponse.setToken();
-            loginResponse.setUser(loginRequest.getUser());
+            LoginResponse loginResponse = loginService.getUser(loginRequest.getUser());
             return Response.ok(loginResponse).build();
         } else {
             return Response.status(Response.Status.UNAUTHORIZED).build();
