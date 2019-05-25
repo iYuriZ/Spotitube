@@ -11,8 +11,6 @@ import java.util.List;
 public class PlaylistDAO extends DAOSetup {
 
     public List<Playlist> findAllPlaylistsByToken(String token) {
-
-        System.out.println("Entered playlistDAO");
         try {
             prepareStmt("SELECT id, name FROM playlists WHERE owner_token = ?");
             stmt.setString(1, token);

@@ -1,6 +1,8 @@
-package me.yuri.oosedea.datasource.mo;
+package me.yuri.oosedea.rest.dto.implementation;
 
-public class Track {
+import me.yuri.oosedea.rest.dto.DTO;
+
+public class TrackRequest implements DTO {
 
     private int id;
     private String title;
@@ -12,7 +14,7 @@ public class Track {
     private String description;
     private boolean offlineAvailable;
 
-    public Track() {}
+    public TrackRequest() {}
 
     public int getId() {
         return id;
