@@ -17,6 +17,7 @@
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.34" />
           <element id="library" level="project" name="Maven: org.mindrot:jbcrypt:0.4" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.7" />
+          <element id="library" level="project" name="Maven: com.airhacks:jaxrs-cors:0.0.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

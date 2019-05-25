@@ -1,7 +1,9 @@
 package me.yuri.oosedea.rest;
 
-import me.yuri.oosedea.rest.dto.LoginRequest;
-import me.yuri.oosedea.rest.dto.LoginResponse;
+import me.yuri.oosedea.datasource.mo.User;
+import me.yuri.oosedea.exceptions.UnauthorizedUserException;
+import me.yuri.oosedea.rest.dto.implementation.LoginRequest;
+import me.yuri.oosedea.rest.dto.implementation.LoginResponse;
 import me.yuri.oosedea.service.LoginService;
 
 import javax.inject.Inject;
@@ -13,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/login")
-public class LoginController {
+public class LoginController extends Responses {
 
     @Inject
     LoginService loginService;
@@ -22,13 +24,13 @@ public class LoginController {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(LoginRequest loginRequest) {
-        LoginResponse loginResponse = new LoginResponse();
-        if (loginService.authorized(loginRequest.getUser(), loginRequest.getPassword())) {
-            loginResponse.setToken();
-            loginResponse.setUser(loginRequest.getUser());
-            return Response.ok(loginResponse).build();
-        } else {
-            return Response.status(Response.Status.UNAUTHORIZED).build();
+        try {
+            User user = loginService.authenticate(loginRequest.getUser(), loginRequest.getPassword());
+            LoginResponse response = new LoginResponse(user.getFirstName(), user.getLastName(), user.getToken());
+            return respondOk(response);
+
+        } catch (UnauthorizedUserException e) {
+            return respondUnauthorized(e);
         }
     }
 }

@@ -1,13 +1,14 @@
-package me.yuri.oosedea.rest.dto;
+package me.yuri.oosedea.rest.dto.implementation;
 
-public class LoginRequest {
+import me.yuri.oosedea.rest.dto.DTO;
+
+public class LoginRequest implements DTO {
 
     private String user;
     private String password;
 
-    public LoginRequest (String user, String password) {
-        this.user = user;
-        this.password = password;
+    public LoginRequest () {
+
     }
 
     public String getPassword() {
