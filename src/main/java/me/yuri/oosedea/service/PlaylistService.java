@@ -27,4 +27,9 @@ public class PlaylistService {
         playlistDAO.updatePlaylistOnToken(id, token, name);
         return this.getAllPlaylists(token);
     }
+
+    public List<Playlist> deletePlaylist(int id, String token) {
+        playlistDAO.deletePlaylistOnToken(id, token);
+        return this.getAllPlaylists(token);
+    }
 }

@@ -91,4 +91,17 @@ public class PlaylistDAO extends DAOSetup {
             e.printStackTrace();
         }
     }
+
+    public void deletePlaylistOnToken(int id, String token) {
+        try {
+            prepareStmt("DELETE FROM playlists WHERE id = ? AND owner_token = ?");
+            stmt.setInt(1, id);
+            stmt.setString(2, token);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

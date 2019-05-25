@@ -49,4 +49,16 @@ public class PlaylistController extends Responses {
         PlaylistResponse response = new PlaylistResponse(playlists);
         return respondCreated(response);
     }
+
+    @DELETE
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response deletePlaylist(@QueryParam("token") String token, @PathParam("id") int id) {
+        System.out.println("Deleting this playlist");
+        System.out.println("id: " + id);
+        List<Playlist> playlists = service.deletePlaylist(id, token);
+        PlaylistResponse response = new PlaylistResponse(playlists);
+        return respondOk(response);
+    }
 }
