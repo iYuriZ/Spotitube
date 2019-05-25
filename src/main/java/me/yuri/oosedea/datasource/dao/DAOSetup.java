@@ -13,8 +13,9 @@ public abstract class DAOSetup {
 
     @Inject
     protected DatabaseConnection db;
-    protected PreparedStatement stmt;
     protected Connection connection;
+
+    protected PreparedStatement stmt;
 
     protected void prepareStmt(String s) throws SQLException, IOException {
         connection = db.getDBConnection();

@@ -7,9 +7,7 @@ public class LoginRequest implements DTO {
     private String user;
     private String password;
 
-    public LoginRequest () {
-
-    }
+    public LoginRequest () {}
 
     public String getPassword() {
         return password;

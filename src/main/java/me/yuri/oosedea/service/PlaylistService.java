@@ -2,10 +2,9 @@ package me.yuri.oosedea.service;
 
 import me.yuri.oosedea.datasource.dao.PlaylistDAO;
 import me.yuri.oosedea.datasource.mo.Playlist;
-import me.yuri.oosedea.rest.dto.PlaylistResponse;
+import me.yuri.oosedea.rest.dto.implementation.PlaylistResponse;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
 import java.util.List;
 
 public class PlaylistService {
@@ -15,9 +14,17 @@ public class PlaylistService {
     @Inject
     private PlaylistDAO playlistDAO;
 
-    public PlaylistResponse getPlaylists(String token) {
-        PlaylistResponse response = new PlaylistResponse();
-        return getPlaylists(token);
+    public List<Playlist> getAllPlaylists(String token) {
+        return playlistDAO.findAllPlaylistsByToken(token);
     }
 
+    public List<Playlist> addNewPlaylist(String token, String name) {
+        playlistDAO.addNewPlaylistOnToken(token, name);
+        return this.getAllPlaylists(token);
+    }
+
+    public List<Playlist> renamePlaylist(int id, String token, String name) {
+        playlistDAO.updatePlaylistOnToken(id, token, name);
+        return this.getAllPlaylists(token);
+    }
 }

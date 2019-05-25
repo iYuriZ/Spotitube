@@ -10,15 +10,13 @@ import java.util.List;
 
 public class PlaylistDAO extends DAOSetup {
 
-    public List<Playlist> getPlaylistsIdByToken(String token) {
-        List<Playlist> playlists = new ArrayList<Playlist>();
+    public List<Playlist> findAllPlaylistsByToken(String token) {
+
+        System.out.println("Entered playlistDAO");
         try {
             prepareStmt("SELECT id, name FROM playlists WHERE owner_token = ?");
-            ResultSet results = getResultSet();
-            while (results.next()) {
-                playlists.add(mapResultsToPlaylist(results.getInt("id"), results.getString("name")));
-            }
-            return playlists;
+            stmt.setString(1, token);
+            return getListOfPlaylists();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -27,30 +25,70 @@ public class PlaylistDAO extends DAOSetup {
         return null;
     }
 
-    private Playlist mapResultsToPlaylist(int id, String name) {
+    private List<Playlist> getListOfPlaylists() throws SQLException {
+        List<Playlist> playlists = new ArrayList<Playlist>();
+        ResultSet results = getResultSet();
+        while (results.next()) {
+            playlists.add(mapResultsToPlaylist(results.getInt("id"), results.getString("name")));
+        }
+        return playlists;
+    }
+
+    private Playlist mapResultsToPlaylist(int playlistId, String name) {
         Playlist playlist = new Playlist();
-        playlist.setId(id);
+        playlist.setId(playlistId);
         playlist.setName(name);
         playlist.setOwner(true);
-        playlist.setTracks(getTracksInPlaylist(id));
+        playlist.setTracks(getTracksInPlaylist(playlistId));
         return playlist;
     }
 
-    private int[] getTracksInPlaylist(int id) {
-        List<Integer> tracksInPlaylist = new ArrayList<Integer>();
+    private int[] getTracksInPlaylist(int playlistId) {
         try {
             prepareStmt("SELECT trackId FROM tracksInPlaylists WHERE playlistId = ?");
-            ResultSet results = getResultSet();
-            while (results.next()) {
-                tracksInPlaylist.add(results.getInt("trackId"));
-            }
-            int[] tracks = tracksInPlaylist.stream().mapToInt(i->i).toArray();
-            return tracks;
+            stmt.setInt(1, playlistId);
+            return getAllTrackIdsInPlaylist();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    private int[] getAllTrackIdsInPlaylist() throws SQLException {
+        List<Integer> tracksInPlaylist = new ArrayList<Integer>();
+        ResultSet results = getResultSet();
+        while (results.next()) {
+            tracksInPlaylist.add(results.getInt("trackId"));
+        }
+        return tracksInPlaylist.stream().mapToInt(i->i).toArray();
+    }
+
+    public void addNewPlaylistOnToken(String token, String name) {
+        try {
+            prepareStmt("INSERT INTO playlists (name, owner_token, length) VALUES (?, ?, 0)");
+            stmt.setString(1, name);
+            stmt.setString(2, token);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updatePlaylistOnToken(int id, String token, String name) {
+        try {
+            prepareStmt("UPDATE playlists SET name = ? WHERE id = ? AND owner_token = ?");
+            stmt.setString(1, name);
+            stmt.setInt(2, id);
+            stmt.setString(3, token);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

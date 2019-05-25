@@ -11,6 +11,7 @@ public class UserDAO extends DAOSetup {
     public User findUserByUsername(String userName) {
         try {
             prepareStmt("SELECT user, password, token, firstname, lastname FROM user u WHERE user = ?");
+            stmt.setString(1, userName);
             return getUser();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -28,6 +29,7 @@ public class UserDAO extends DAOSetup {
             user = mapResultSetToUser(results);
         }
         closeConnection();
+
         return user;
     }
 

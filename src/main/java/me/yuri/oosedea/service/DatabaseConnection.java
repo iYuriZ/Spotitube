@@ -10,9 +10,7 @@ import static java.sql.DriverManager.getConnection;
 
 public class DatabaseConnection {
 
-    public DatabaseConnection() {
-
-    }
+    public DatabaseConnection() {}
 
     public Connection getDBConnection() throws IOException {
         Properties connection = getProperties();

@@ -18,13 +18,12 @@ import javax.ws.rs.core.Response;
 public class LoginController extends Responses {
 
     @Inject
-    LoginService loginService;
+    private LoginService loginService;
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(LoginRequest loginRequest) {
-<<<<<<< HEAD
         try {
             User user = loginService.authenticate(loginRequest.getUser(), loginRequest.getPassword());
             LoginResponse response = new LoginResponse(user.getFirstName(), user.getLastName(), user.getToken());
@@ -32,13 +31,6 @@ public class LoginController extends Responses {
 
         } catch (UnauthorizedUserException e) {
             return respondUnauthorized(e);
-=======
-        if (loginService.authorized(loginRequest.getUser(), loginRequest.getPassword())) {
-            LoginResponse loginResponse = loginService.getUser(loginRequest.getUser());
-            return Response.ok(loginResponse).build();
-        } else {
-            return Response.status(Response.Status.UNAUTHORIZED).build();
->>>>>>> 40ea2af9775ef4629d7ac057ff86d0e86f850376
         }
     }
 }

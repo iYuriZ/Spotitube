@@ -1,19 +1,18 @@
 package me.yuri.oosedea.rest;
 
-import me.yuri.oosedea.rest.dto.PlaylistRequest;
-import me.yuri.oosedea.rest.dto.PlaylistResponse;
+import me.yuri.oosedea.datasource.mo.Playlist;
+import me.yuri.oosedea.rest.dto.implementation.PlaylistRequest;
+import me.yuri.oosedea.rest.dto.implementation.PlaylistResponse;
 import me.yuri.oosedea.service.PlaylistService;
 
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
 
 @Path("/playlists")
-public class PlaylistController {
+public class PlaylistController extends Responses {
 
     @Inject
     PlaylistService service;
@@ -21,9 +20,33 @@ public class PlaylistController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response requestAllPlaylists(PlaylistRequest request) {
-        PlaylistResponse response = service.getPlaylists(request.getToken());
-        return Response.ok(response).build();
+    public Response requestAllPlaylists(@QueryParam("token") String token) {
+        System.out.println("Entered playlistcontroller");
+        List<Playlist> playlists = service.getAllPlaylists(token);
+        PlaylistResponse response = new PlaylistResponse(playlists);
+        return respondOk(response);
     }
 
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addNewPlaylist(@QueryParam("token") String token, PlaylistRequest request) {
+        System.out.println("Entered addnewplaylist");
+        System.out.println("Name: " + request.getName());
+        List<Playlist> playlists = service.addNewPlaylist(token, request.getName());
+        PlaylistResponse response = new PlaylistResponse(playlists);
+        return respondCreated(response);
+    }
+
+    @PUT
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response renamePlaylist(@QueryParam("token") String token, PlaylistRequest request) {
+        System.out.println("Entered addnewplaylist");
+        System.out.println("Name: " + request.getName());
+        List<Playlist> playlists = service.renamePlaylist(request.getId(), token, request.getName());
+        PlaylistResponse response = new PlaylistResponse(playlists);
+        return respondCreated(response);
+    }
 }
