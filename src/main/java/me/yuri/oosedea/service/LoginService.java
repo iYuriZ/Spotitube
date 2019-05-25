@@ -2,7 +2,11 @@ package me.yuri.oosedea.service;
 
 import me.yuri.oosedea.datasource.dao.UserDAO;
 import me.yuri.oosedea.datasource.mo.User;
+<<<<<<< HEAD
 import me.yuri.oosedea.exceptions.UnauthorizedUserException;
+=======
+import me.yuri.oosedea.rest.dto.LoginResponse;
+>>>>>>> 40ea2af9775ef4629d7ac057ff86d0e86f850376
 
 import javax.inject.Inject;
 
@@ -27,7 +31,5 @@ public class LoginService {
         userDAO.updateToken(storedUser);
 
         return storedUser;
-
     }
-
 }
