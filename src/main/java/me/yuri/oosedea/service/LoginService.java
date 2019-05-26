@@ -1,29 +1,12 @@
 package me.yuri.oosedea.service;
 
-import me.yuri.oosedea.datasource.dao.UserDAO;
-import me.yuri.oosedea.datasource.mo.User;
+import me.yuri.oosedea.modelobjects.User;
 import me.yuri.oosedea.exceptions.UnauthorizedUserException;
 
+public interface LoginService {
 
-import javax.inject.Inject;
+    User authenticate(String username, String password) throws UnauthorizedUserException;
 
-public class LoginService {
+    boolean authorizeByToken(String token) throws UnauthorizedUserException;
 
-    public LoginService() {}
-
-    @Inject
-    private UserDAO userDAO;
-
-    public User authenticate(String username, String password) throws UnauthorizedUserException {
-
-        User user = userDAO.findUserByUsername(username);
-
-        if(user == null)
-            throw new UnauthorizedUserException();
-
-        if (!user.getPassword().equals(password))
-            throw new UnauthorizedUserException();
-
-        return user;
-    }
 }

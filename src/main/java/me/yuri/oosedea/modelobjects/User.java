@@ -1,4 +1,4 @@
-package me.yuri.oosedea.datasource.mo;
+package me.yuri.oosedea.modelobjects;
 
 public class User {
 

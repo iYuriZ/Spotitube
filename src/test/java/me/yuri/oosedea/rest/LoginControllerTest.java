@@ -1,7 +1,7 @@
 package me.yuri.oosedea.rest;
 
 import me.yuri.oosedea.rest.dto.implementation.LoginRequest;
-import me.yuri.oosedea.service.LoginService;
+import me.yuri.oosedea.service.implementation.LoginServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +13,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 public class LoginControllerTest {
 
     @Mock
-    private LoginService loginService;
+    private LoginServiceImpl loginService;
 
     @InjectMocks
     private LoginController loginController;

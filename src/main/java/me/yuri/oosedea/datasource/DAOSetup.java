@@ -1,4 +1,4 @@
-package me.yuri.oosedea.datasource.dao;
+package me.yuri.oosedea.datasource;
 
 import me.yuri.oosedea.service.DatabaseConnection;
 

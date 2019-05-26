@@ -1,6 +1,7 @@
 package me.yuri.oosedea.datasource.dao;
 
-import me.yuri.oosedea.datasource.mo.Track;
+import me.yuri.oosedea.datasource.DAOSetup;
+import me.yuri.oosedea.modelobjects.Track;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -12,8 +13,8 @@ public class TrackDAO extends DAOSetup {
 
     public List<Track> getAllTracksNotInPlaylist(int playlistId) {
         try {
-            prepareStmt("SELECT t.id, t.title, t.performer, t.duration, t.album, t.playcount, t.publicationDate, t.description, t.offlineAvailable " +
-                    "FROM tracks t INNER JOIN tracksInPlaylists tp ON t.id = tp.trackId WHERE tp.playlistId != ?");
+            prepareStmt("SELECT t.id, t.title, t.performer, t.duration, t.album, t.playcount, t.publicationDate, t.description, t.offlineAvailable\n" +
+                    "FROM tracks t WHERE t.id NOT IN (SELECT trackId FROM tracksInPlaylists WHERE playlistId = ?);");
             stmt.setInt(1, playlistId);
             return getTracks();
         } catch (SQLException e) {
@@ -26,8 +27,8 @@ public class TrackDAO extends DAOSetup {
 
     public List<Track> getAllTracksInPlaylist(int playlistId) {
         try {
-            prepareStmt("SELECT t.id, t.title, t.performer, t.duration, t.album, t.playcount, t.publicationDate, t.description, t.offlineAvailable " +
-                    "FROM tracks t INNER JOIN tracksInPlaylists tp ON t.id = tp.trackId WHERE tp.playlistId = ?");
+            prepareStmt("SELECT t.id, t.title, t.performer, t.duration, t.album, t.playcount, t.publicationDate, t.description, t.offlineAvailable\n" +
+                    "FROM tracks t WHERE t.id IN (SELECT trackId FROM tracksInPlaylists WHERE playlistId = ?);");
             stmt.setInt(1, playlistId);
             return getTracks();
         } catch (SQLException e) {
@@ -78,6 +79,19 @@ public class TrackDAO extends DAOSetup {
         try {
             prepareStmt("DELETE FROM tracksInPlaylists WHERE playlistId = ? AND trackId = ?");
             stmt.setInt(1, playlistId);
+            stmt.setInt(2, trackId);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateTrackAvailability(int trackId, boolean offlineAvailable) {
+        try {
+            prepareStmt("UPDATE tracks SET offlineAvailable = ? WHERE id = ?");
+            stmt.setBoolean(1, offlineAvailable);
             stmt.setInt(2, trackId);
             stmt.executeUpdate();
         } catch (SQLException e) {

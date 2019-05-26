@@ -1,6 +1,6 @@
 package me.yuri.oosedea.rest.dto.implementation;
 
-import me.yuri.oosedea.datasource.mo.Track;
+import me.yuri.oosedea.modelobjects.Track;
 import me.yuri.oosedea.rest.dto.DTO;
 
 import java.util.List;

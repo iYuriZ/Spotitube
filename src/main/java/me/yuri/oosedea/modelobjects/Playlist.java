@@ -1,6 +1,4 @@
-package me.yuri.oosedea.datasource.mo;
-
-import java.util.List;
+package me.yuri.oosedea.modelobjects;
 
 public class Playlist {
 

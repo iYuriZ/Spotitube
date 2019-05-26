@@ -1,6 +1,6 @@
 package me.yuri.oosedea.rest;
 
-import me.yuri.oosedea.datasource.mo.User;
+import me.yuri.oosedea.modelobjects.User;
 import me.yuri.oosedea.exceptions.UnauthorizedUserException;
 import me.yuri.oosedea.rest.dto.implementation.LoginRequest;
 import me.yuri.oosedea.rest.dto.implementation.LoginResponse;

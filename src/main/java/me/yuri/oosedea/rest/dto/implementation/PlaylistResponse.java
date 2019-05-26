@@ -1,6 +1,6 @@
 package me.yuri.oosedea.rest.dto.implementation;
 
-import me.yuri.oosedea.datasource.mo.Playlist;
+import me.yuri.oosedea.modelobjects.Playlist;
 import me.yuri.oosedea.rest.dto.DTO;
 
 import java.util.List;

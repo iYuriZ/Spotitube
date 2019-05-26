@@ -1,6 +1,7 @@
 package me.yuri.oosedea.datasource.dao;
 
-import me.yuri.oosedea.datasource.mo.Playlist;
+import me.yuri.oosedea.datasource.DAOSetup;
+import me.yuri.oosedea.modelobjects.Playlist;
 
 import java.io.IOException;
 import java.sql.ResultSet;

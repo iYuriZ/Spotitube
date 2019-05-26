@@ -1,6 +1,7 @@
 package me.yuri.oosedea.datasource.dao;
 
-import me.yuri.oosedea.datasource.mo.User;
+import me.yuri.oosedea.datasource.DAOSetup;
+import me.yuri.oosedea.modelobjects.User;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -10,8 +11,21 @@ public class UserDAO extends DAOSetup {
 
     public User findUserByUsername(String userName) {
         try {
-            prepareStmt("SELECT user, password, token, firstname, lastname FROM user u WHERE user = ?");
+            prepareStmt("SELECT u.user, u.password, u.token, u.firstname, u.lastname FROM user u WHERE u.user = ?");
             stmt.setString(1, userName);
+            return getUser();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public User findUserByToken(String token) {
+        try {
+            prepareStmt("SELECT user, password, token, firstname, lastname FROM user WHERE token = ?");
+            stmt.setString(1, token);
             return getUser();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -42,5 +56,4 @@ public class UserDAO extends DAOSetup {
         user.setLastName(results.getString("lastname"));
         return user;
     }
-
 }
