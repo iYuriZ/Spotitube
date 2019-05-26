@@ -40,7 +40,7 @@ public class TrackDAO extends DAOSetup {
     }
 
     private List<Track> getTracks() throws SQLException {
-        List<Track> tracks = new ArrayList<Track>();
+        List<Track> tracks = new ArrayList<>();
         ResultSet results = getResultSet();
         while (results.next()) {
             tracks.add(mapResultsToTrack(results));

@@ -49,9 +49,9 @@ public class PlaylistControllerTest {
 
     @Test
     public void testRequestAllPlaylistsReturnsOk() throws UnauthorizedUserException {
-        PlaylistResponse response = new PlaylistResponse(new ArrayList<Playlist>());
+        PlaylistResponse response = new PlaylistResponse(new ArrayList<>());
 
-        Mockito.when(playlistService.getAllPlaylists(token, false)).thenReturn(new ArrayList<Playlist>());
+        Mockito.when(playlistService.getAllPlaylists(token, false)).thenReturn(new ArrayList<>());
 
         Response actual = playlistController.requestAllPlaylists(token);
 
@@ -70,7 +70,7 @@ public class PlaylistControllerTest {
         playlist.setOwner(true);
         playlist.setTracks(new int[] {1, 2});
 
-        List<Playlist> playlists = new ArrayList<Playlist>();
+        List<Playlist> playlists = new ArrayList<>();
         playlists.add(playlist);
 
         PlaylistResponse response = new PlaylistResponse(playlists);
@@ -95,7 +95,7 @@ public class PlaylistControllerTest {
         playlist.setOwner(true);
         playlist.setTracks(new int[] {1, 2});
 
-        List<Playlist> playlists = new ArrayList<Playlist>();
+        List<Playlist> playlists = new ArrayList<>();
         playlists.add(playlist);
 
         PlaylistResponse response = new PlaylistResponse(playlists);
@@ -109,8 +109,8 @@ public class PlaylistControllerTest {
 
     @Test
     public void testDeletePlaylistReturnsOk() throws UnauthorizedUserException {
-        List<Playlist> playlists = new ArrayList<Playlist>();
-        PlaylistResponse response = new PlaylistResponse(new ArrayList<Playlist>());
+        List<Playlist> playlists = new ArrayList<>();
+        PlaylistResponse response = new PlaylistResponse(new ArrayList<>());
 
         Mockito.when(playlistService.deletePlaylist(1, token)).thenReturn(playlists);
 
@@ -121,8 +121,8 @@ public class PlaylistControllerTest {
 
     @Test
     public void testGetAllTracksInPlaylistReturnsOk() throws UnauthorizedUserException {
-        List<Track> tracks = new ArrayList<Track>();
-        TracksListResponse response = new TracksListResponse(new ArrayList<Track>());
+        List<Track> tracks = new ArrayList<>();
+        TracksListResponse response = new TracksListResponse(new ArrayList<>());
 
         Mockito.when(trackService.getAllTracksInPlaylist(1, token, false)).thenReturn(tracks);
 

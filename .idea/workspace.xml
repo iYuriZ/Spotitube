@@ -20,48 +20,69 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/spotitube$LoginControllerTest.ic" NAME="LoginControllerTest Coverage Results" MODIFIED="1558880299138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/spotitube$me_yuri_oosedea_in_Spotitube.ic" NAME="me.yuri.oosedea in Spotitube Coverage Results" MODIFIED="1558904426312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>me.yuri.oosedea.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/spotitube$PlaylistDAOTest.ic" NAME="PlaylistDAOTest Coverage Results" MODIFIED="1558901232267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>me.yuri.oosedea.dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/spotitube$LoginControllerTest.ic" NAME="LoginControllerTest Coverage Results" MODIFIED="1558904364767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>me.yuri.oosedea.rest.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/spotitube$PlaylistControllerTest.ic" NAME="PlaylistControllerTest Coverage Results" MODIFIED="1558878093381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/spotitube$PlaylistControllerTest.ic" NAME="PlaylistControllerTest Coverage Results" MODIFIED="1558904314245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>me.yuri.oosedea.rest.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/spotitube$TrackDAOTest.ic" NAME="TrackDAOTest Coverage Results" MODIFIED="1558902173306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>me.yuri.oosedea.dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/spotitube$LoginServiceTest.ic" NAME="LoginServiceTest Coverage Results" MODIFIED="1558903941610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>me.yuri.oosedea.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/spotitube$TrackControllerTest.ic" NAME="TrackControllerTest Coverage Results" MODIFIED="1558904386239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>me.yuri.oosedea.rest.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/spotitube$userDAOTest.ic" NAME="userDAOTest Coverage Results" MODIFIED="1558882739840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>me.yuri.oosedea.dao.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/spotitube$TomEE.ic" NAME="TomEE Coverage Results" MODIFIED="1558877671906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/spotitube$TomEE.ic" NAME="TomEE Coverage Results" MODIFIED="1558902245059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="233" />
+    <option name="myElementSize" value="246" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/userDAOTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/TrackDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-204">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/User.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/Track.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="595">
+              <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/UserDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/implementation/TrackServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="45" column="68" lean-forward="true" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,10 +91,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/PlaylistDAOTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/TrackController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="82">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,10 +103,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/LoginControllerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/PlaylistController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+            <state relative-caret-position="527">
+              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,10 +115,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/TestMockDatabaseConnection.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TracksListResponse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,55 +127,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/PlaylistControllerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/DatabaseConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1422">
-              <caret line="123" column="8" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="130" selection-end-column="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1782#1792#0" expanded="true" />
-                <element signature="e#2994#3004#0" expanded="true" />
-                <element signature="e#3497#3507#0" expanded="true" />
-                <element signature="e#4070#4077#0" expanded="true" />
-                <element signature="e#4656#4663#0" expanded="true" />
-                <element signature="e#6105#6112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/Responses.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="187">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/TrackControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-                <element signature="e#920#927#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/PlaylistResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -193,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/Spotitube_war/META-INF/beans.xml" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/DAOSetup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/LoginRequest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/mo/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/LoginResponse.java" />
@@ -202,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TracksListResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TrackResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/mo/Track.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TrackRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/TracksService.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/PlaylistDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/TracksController.java" />
@@ -215,17 +192,24 @@
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/TrackController.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/implementation/TrackServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/PlaylistService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/TrackDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/PlaylistRequest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/PlaylistControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/PlaylistController.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/Responses.java" />
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/TrackControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/PlaylistDAOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/LoginControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/TestMockDatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/userDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/User.java" />
+        <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/UserDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/TrackDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/TrackDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/Playlist.java" />
+        <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/PlaylistDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/LoginRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/PlaylistRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TrackRequest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/PlaylistControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/service/LoginServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/Track.java" />
       </list>
     </option>
   </component>
@@ -246,8 +230,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -420,22 +404,18 @@
               <item name="oosedea" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558883314118" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558905767148" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -460,7 +440,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.userDAOTest">
+  <component name="RunManager" selected="TomEE Server.TomEE">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -489,6 +469,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.yuri.oosedea.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.yuri.oosedea.service" />
+      <option name="MAIN_CLASS_NAME" value="me.yuri.oosedea.service.LoginServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PlaylistControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spotitube" />
       <extension name="coverage">
@@ -505,6 +501,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TrackControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.yuri.oosedea.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.yuri.oosedea.rest" />
+      <option name="MAIN_CLASS_NAME" value="me.yuri.oosedea.rest.TrackControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -512,17 +524,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="userDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="me.yuri.oosedea in Spotitube" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spotitube" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.yuri.oosedea.dao.*" />
+          <option name="PATTERN" value="me.yuri.oosedea.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="me.yuri.oosedea.dao" />
-      <option name="MAIN_CLASS_NAME" value="me.yuri.oosedea.dao.userDAOTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="me.yuri.oosedea" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -620,9 +631,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.userDAOTest" />
+        <item itemvalue="JUnit.me.yuri.oosedea in Spotitube" />
+        <item itemvalue="JUnit.TrackControllerTest" />
         <item itemvalue="JUnit.LoginControllerTest" />
         <item itemvalue="JUnit.PlaylistControllerTest" />
+        <item itemvalue="JUnit.LoginServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -650,48 +663,49 @@
       <workItem from="1558800336817" duration="1691000" />
       <workItem from="1558802266499" duration="18879000" />
       <workItem from="1558861951341" duration="18662000" />
+      <workItem from="1558896791142" duration="9638000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 20m 37s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2019.05.26 at 22h 43m 15s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 24m 05s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2019.05.26 at 22h 47m 18s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 28m 12s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="LoginServiceTest - 2019.05.26 at 22h 47m 32s.xml">
+      <configuration name="LoginServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 31m 32s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="LoginServiceTest - 2019.05.26 at 22h 48m 52s.xml">
+      <configuration name="LoginServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 34m 00s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="LoginServiceTest - 2019.05.26 at 22h 50m 58s.xml">
+      <configuration name="LoginServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 36m 44s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="LoginServiceTest - 2019.05.26 at 22h 52m 26s.xml">
+      <configuration name="LoginServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 40m 45s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2019.05.26 at 22h 58m 38s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 47m 13s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="LoginControllerTest - 2019.05.26 at 22h 59m 29s.xml">
+      <configuration name="LoginControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 49m 13s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="TrackControllerTest - 2019.05.26 at 22h 59m 50s.xml">
+      <configuration name="TrackControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="userDAOTest - 2019.05.26 at 16h 59m 05s.xml">
-      <configuration name="userDAOTest" configurationId="JUnit" />
+    <history-entry file="me_yuri_oosedea_in_Spotitube - 2019.05.26 at 23h 00m 31s.xml">
+      <configuration name="me.yuri.oosedea in Spotitube" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73666000" />
+    <option name="totallyTimeSpent" value="83304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18590604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2624161" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -700,7 +714,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.38668555" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932796" weight="0.47592068" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -716,7 +730,6 @@
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="ANTLR Preview" order="15" />
       <window_info anchor="bottom" id="Messages" order="16" weight="0.30169973" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3295302" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -730,6 +743,7 @@
       <window_info anchor="right" id="CDI" order="10" />
       <window_info anchor="right" id="Bean Validation" order="11" />
       <window_info anchor="right" id="Maven" order="12" />
+      <window_info anchor="right" id="Coverage" order="13" side_tool="true" weight="0.4557047" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25559106" />
@@ -784,13 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/service/LoginServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/DTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -813,41 +820,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/Playlist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/sql/DriverManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="235" column="29" selection-start-line="235" selection-start-column="29" selection-end-line="235" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/LoginResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/LoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -889,13 +865,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TrackResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TrackResponse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -903,54 +873,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/PlaylistDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TrackRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TracksListResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/TracksInPlaylistController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/Track.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-313">
-          <caret column="37" selection-start-column="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/implementation/LoginServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/TracksInPlaylistController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/LoginService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -965,16 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-143">
           <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/implementation/TrackServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="45" column="68" lean-forward="true" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -995,34 +908,192 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/TrackDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/PlaylistRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/PlaylistController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        <state relative-caret-position="884">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/Responses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/TrackControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/TestMockDatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/LoginRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/PlaylistDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/PlaylistDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="998">
+          <caret line="69" column="36" lean-forward="true" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
+          <folding>
+            <element signature="e#1926#1935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/TrackDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1236">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/LoginResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/PlaylistRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TrackRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/PlaylistResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/UserDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/service/LoginServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/implementation/LoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/PlaylistControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="123" column="43" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/LoginControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/TrackDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/implementation/TrackServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="45" column="68" lean-forward="true" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,89 +1107,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/TrackControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/PlaylistController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#920#927#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/PlaylistControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="123" column="8" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="130" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1782#1792#0" expanded="true" />
-            <element signature="e#2994#3004#0" expanded="true" />
-            <element signature="e#3497#3507#0" expanded="true" />
-            <element signature="e#4070#4077#0" expanded="true" />
-            <element signature="e#4656#4663#0" expanded="true" />
-            <element signature="e#6105#6112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/Responses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="527">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/TestMockDatabaseConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/TracksListResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/LoginControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/PlaylistDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/userDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1127,8 +1129,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="250">
+          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/modelobjects/Track.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
         </state>
       </provider>
     </entry>

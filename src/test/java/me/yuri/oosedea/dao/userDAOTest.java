@@ -17,7 +17,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 @RunWith(MockitoJUnitRunner.class)
-public class userDAOTest {
+public class UserDAOTest {
 
     @Mock
     private DatabaseConnection db;
@@ -41,23 +41,6 @@ public class userDAOTest {
         expected.setToken("0891-bva2-he7d");
         expected.setFirstName("Dennis");
         expected.setLastName("Breuker");
-
-        System.out.println("Actual user: " + actual.getUser());
-        System.out.println("Actual password: " + actual.getPassword());
-        System.out.println("Actual token: " + actual.getToken());
-        System.out.println("Actual firstname: " + actual.getFirstName());
-        System.out.println("Actual lastname: " + actual.getLastName());
-        System.out.println("Expected user: " + expected.getUser());
-        System.out.println("Expected password: " + expected.getPassword());
-        System.out.println("Expected token: " + expected.getToken());
-        System.out.println("Expected firstname: " + expected.getFirstName());
-        System.out.println("Expected lastname: " + expected.getLastName());
-
-        System.out.println(expected.getUser() + " " + actual.getUser());
-        System.out.println(expected.getPassword() + " " + actual.getPassword());
-        System.out.println(expected.getToken() + " " + actual.getToken());
-        System.out.println(expected.getFirstName() + " " + actual.getFirstName());
-        System.out.println(expected.getLastName() + " " + actual.getLastName());
 
         Assert.assertEquals(expected, actual);
     }

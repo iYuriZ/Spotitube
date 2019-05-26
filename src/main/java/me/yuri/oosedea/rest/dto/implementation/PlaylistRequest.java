@@ -15,8 +15,6 @@ public class PlaylistRequest implements DTO {
     public void setId(int id) { this.id = id; }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
-    public boolean isOwner() { return owner; }
     public void setOwner(boolean owner) { this.owner = owner; }
-    public int[] getTracks() { return tracks; }
     public void setTracks(int[] tracks) { this.tracks = tracks; }
 }
