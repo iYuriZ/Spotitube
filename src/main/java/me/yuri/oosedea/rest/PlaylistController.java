@@ -80,7 +80,7 @@ public class PlaylistController extends Responses {
     public Response addTrackToPlaylist(@QueryParam("token") String token, @PathParam("id") int playlistId, TrackRequest request) throws UnauthorizedUserException {
         List<Track> tracks = trackService.addTrackToPlaylist(playlistId, request.getId(), request.isOfflineAvailable(), token);
         TracksListResponse response = new TracksListResponse(tracks);
-        return respondOk(response);
+        return respondCreated(response);
     }
 
     @DELETE

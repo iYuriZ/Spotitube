@@ -9,7 +9,7 @@ public class PlaylistRequest implements DTO {
     private boolean owner;
     private int[] tracks;
 
-    private PlaylistRequest() {}
+    public PlaylistRequest() {}
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
