@@ -58,14 +58,14 @@ public class Track {
         if (this == o) return true;
         if (!(o instanceof Track)) return false;
         Track track = (Track) o;
-        return Objects.equals(id, track.id) &&
-                Objects.equals(title, track.title) &&
-                Objects.equals(performer, track.performer) &&
-                Objects.equals(duration, track.duration) &&
-                Objects.equals(album, track.album) &&
-                Objects.equals(playcount, track.playcount) &&
-                Objects.equals(publicationDate, track.publicationDate) &&
-                Objects.equals(description, track.description) &&
-                Objects.equals(offlineAvailable, track.offlineAvailable);
+        return Objects.equals(id, track.getId()) &&
+                Objects.equals(title, track.getTitle()) &&
+                Objects.equals(performer, track.getPerformer()) &&
+                Objects.equals(duration, track.getDuration()) &&
+                Objects.equals(album, track.getAlbum()) &&
+                Objects.equals(playcount, track.getPlaycount()) &&
+                Objects.equals(publicationDate, track.getPublicationDate()) &&
+                Objects.equals(description, track.getDescription()) &&
+                Objects.equals(offlineAvailable, track.isOfflineAvailable());
     }
 }

@@ -35,13 +35,17 @@ public class TrackControllerTest {
 
     @Test
     public void testGetAllTracksNotInPlaylistReturnsOk() throws UnauthorizedUserException {
-        List<Track> tracks = new ArrayList<Track>();
-        TracksListResponse response = new TracksListResponse(new ArrayList<Track>());
+        TracksListResponse response = new TracksListResponse(new ArrayList<>());
 
-        Mockito.when(trackService.getAllTracksNotInPlaylist(1, token)).thenReturn(tracks);
+        Mockito.when(trackService.getAllTracksNotInPlaylist(1, token)).thenReturn(new ArrayList<>());
 
+        Response expected = Response.ok(response).build();
         Response actual = trackController.getAllTracksNotInPlaylist(1, token);
 
-        Assert.assertEquals(Response.ok(response).build().getStatus(), actual.getStatus());
+        List<Track> expectedList = new ArrayList<>();
+        List<Track> actualList = response.getTracks();
+
+        Assert.assertEquals(expectedList, actualList);
+        Assert.assertEquals(expected.getStatus(), actual.getStatus());
     }
 }

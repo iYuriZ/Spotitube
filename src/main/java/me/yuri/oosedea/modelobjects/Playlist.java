@@ -1,5 +1,6 @@
 package me.yuri.oosedea.modelobjects;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Playlist {
@@ -45,6 +46,7 @@ public class Playlist {
         return Objects.equals(id, playlist.id) &&
                 Objects.equals(name, playlist.name) &&
                 Objects.equals(owner, playlist.owner) &&
-                Objects.equals(tracks, playlist.tracks);
+                Objects.equals(length, playlist.length) &&
+                Arrays.equals(tracks, playlist.getTracks());
     }
 }

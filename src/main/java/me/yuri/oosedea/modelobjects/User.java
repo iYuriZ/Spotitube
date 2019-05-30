@@ -32,10 +32,10 @@ public class User {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user1 = (User) o;
-        return Objects.equals(user, user1.user) &&
-                Objects.equals(password, user1.password) &&
-                Objects.equals(token, user1.token) &&
-                Objects.equals(firstName, user1.firstName) &&
-                Objects.equals(lastName, user1.lastName);
+        return Objects.equals(user, user1.getUser()) &&
+                Objects.equals(password, user1.getPassword()) &&
+                Objects.equals(token, user1.getToken()) &&
+                Objects.equals(firstName, user1.getFirstName()) &&
+                Objects.equals(lastName, user1.getLastName());
     }
 }
