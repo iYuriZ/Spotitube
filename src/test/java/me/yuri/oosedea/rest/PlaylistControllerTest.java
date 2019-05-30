@@ -49,7 +49,7 @@ public class PlaylistControllerTest {
 
     @Test
     public void testRequestAllPlaylistsReturnsOk() throws UnauthorizedUserException {
-        PlaylistResponse response = new PlaylistResponse(new ArrayList<>());
+        PlaylistResponse response = new PlaylistResponse(new ArrayList<>(), 0);
 
         Mockito.when(playlistService.getAllPlaylists(token, false)).thenReturn(new ArrayList<>());
 
@@ -63,17 +63,18 @@ public class PlaylistControllerTest {
         playlistRequest.setId(1);
         playlistRequest.setName("Rock");
         playlistRequest.setOwner(true);
-        playlistRequest.setTracks(new int[] {1, 2});
+        playlistRequest.setTracks(new int[] {});
 
         playlist.setId(1);
         playlist.setName("Rock");
         playlist.setOwner(true);
-        playlist.setTracks(new int[] {1, 2});
+        playlist.setLength(0);
+        playlist.setTracks(new int[] {});
 
         List<Playlist> playlists = new ArrayList<>();
         playlists.add(playlist);
 
-        PlaylistResponse response = new PlaylistResponse(playlists);
+        PlaylistResponse response = new PlaylistResponse(playlists, 0);
 
         Mockito.when(playlistService.addNewPlaylist(token, "Rock")).thenReturn(playlists);
 
@@ -87,18 +88,19 @@ public class PlaylistControllerTest {
         playlistRequest.setId(1);
         playlistRequest.setName("Rock");
         playlistRequest.setOwner(true);
-        playlistRequest.setTracks(new int[] {1, 2});
+        playlistRequest.setTracks(new int[] {});
 
         Playlist playlist = new Playlist();
         playlist.setId(1);
         playlist.setName("Rock");
         playlist.setOwner(true);
-        playlist.setTracks(new int[] {1, 2});
+        playlist.setLength(0);
+        playlist.setTracks(new int[] {});
 
         List<Playlist> playlists = new ArrayList<>();
         playlists.add(playlist);
 
-        PlaylistResponse response = new PlaylistResponse(playlists);
+        PlaylistResponse response = new PlaylistResponse(playlists, 0);
 
         Mockito.when(playlistService.renamePlaylist(1, token, "Rock")).thenReturn(playlists);
 
@@ -110,7 +112,7 @@ public class PlaylistControllerTest {
     @Test
     public void testDeletePlaylistReturnsOk() throws UnauthorizedUserException {
         List<Playlist> playlists = new ArrayList<>();
-        PlaylistResponse response = new PlaylistResponse(new ArrayList<>());
+        PlaylistResponse response = new PlaylistResponse(new ArrayList<>(), 0);
 
         Mockito.when(playlistService.deletePlaylist(1, token)).thenReturn(playlists);
 

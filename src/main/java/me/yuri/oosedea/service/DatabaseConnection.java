@@ -31,8 +31,7 @@ public class DatabaseConnection {
         return null;
     }
 
-
-    private static Properties getProperties() throws IOException {
+    private Properties getProperties() throws IOException {
         Properties connection = new Properties();
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream input = classLoader.getResourceAsStream("db.properties");

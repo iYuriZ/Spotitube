@@ -39,8 +39,8 @@ public class PlaylistDAOTest {
     }
 
     @Test
-    public void testFindAllPlaylistsByTokenReturnsList() {
-        List<Playlist> actual = playlistDAO.findAllPlaylistsByToken(token);
+    public void testFindAllPlaylistsReturnsList() {
+        List<Playlist> actual = playlistDAO.findAllPlaylists(token);
 
         List<Playlist> expected = new ArrayList<>();
 
@@ -48,20 +48,14 @@ public class PlaylistDAOTest {
         playlist.setId(6);
         playlist.setName("Music");
         playlist.setOwner(true);
+        playlist.setLength(420);
         playlist.setTracks(new int[] {6});
 
         expected.add(playlist);
 
-        Assert.assertEquals(expected.get(0).getId(), actual.get(0).getId());
-        Assert.assertEquals(expected.get(0).getName(), actual.get(0).getName());
-        Assert.assertEquals(expected.get(0).isOwner(), actual.get(0).isOwner());
-        Assert.assertArrayEquals(expected.get(0).getTracks(), actual.get(0).getTracks());
+        Assert.assertEquals(expected.get(0).getId(), actual.get(5).getId());
+        Assert.assertEquals(expected.get(0).getName(), actual.get(5).getName());
+        Assert.assertEquals(expected.get(0).isOwner(), actual.get(5).isOwner());
+        Assert.assertArrayEquals(expected.get(0).getTracks(), actual.get(5).getTracks());
     }
-
-    @Test
-    public void testFindAllPlaylistsByTokenReturnsEmptyList() {
-        List<Playlist> actual = playlistDAO.findAllPlaylistsByToken("0000-1100-2233");
-        Assert.assertEquals(0, actual.size());
-    }
-
 }

@@ -49,8 +49,17 @@ public class LoginControllerTest {
         Mockito.when(loginService.authenticate("dennis", "dennis")).thenReturn(user);
 
         Response actual = loginController.login(loginRequest);
+        Response expected = Response.ok(loginResponse).build();
 
-        Assert.assertEquals(Response.ok(loginResponse).build().getStatus(), actual.getStatus());
+        String expectedUser = "Dennis Breuker";
+        String actualUser = loginResponse.getUser();
+
+        String expectedToken = "0891-bva2-he7d";
+        String actualToken = loginResponse.getToken();
+
+        Assert.assertEquals(expectedUser, actualUser);
+        Assert.assertEquals(expectedToken, actualToken);
+        Assert.assertEquals(expected.getStatus(), actual.getStatus());
     }
 
     @Test

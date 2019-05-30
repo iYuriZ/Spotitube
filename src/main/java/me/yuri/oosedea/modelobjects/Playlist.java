@@ -7,6 +7,7 @@ public class Playlist {
     private int id;
     private String name;
     private boolean owner;
+    private int length;
     private int[] tracks;
 
     public int getId() {
@@ -27,6 +28,8 @@ public class Playlist {
     public void setOwner(boolean owner) {
         this.owner = owner;
     }
+    public int getLength() { return length; }
+    public void setLength(int length) { this.length = length; }
     public int[] getTracks() {
         return tracks;
     }

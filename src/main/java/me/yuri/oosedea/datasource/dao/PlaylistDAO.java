@@ -11,11 +11,10 @@ import java.util.List;
 
 public class PlaylistDAO extends DAOSetup {
 
-    public List<Playlist> findAllPlaylistsByToken(String token) {
+    public List<Playlist> findAllPlaylists(String token) {
         try {
-            prepareStmt("SELECT id, name FROM playlists WHERE owner_token = ?");
-            stmt.setString(1, token);
-            return getListOfPlaylists();
+            prepareStmt("SELECT id, name, owner_token, length FROM playlists");
+            return getListOfPlaylists(token);
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -24,21 +23,33 @@ public class PlaylistDAO extends DAOSetup {
         return null;
     }
 
-    private List<Playlist> getListOfPlaylists() throws SQLException {
-        List<Playlist> playlists = new ArrayList<Playlist>();
+    private List<Playlist> getListOfPlaylists(String token) throws SQLException {
+        List<Playlist> playlists = new ArrayList<>();
         ResultSet results = getResultSet();
         while (results.next()) {
-            playlists.add(mapResultsToPlaylist(results.getInt("id"), results.getString("name")));
+            playlists.add(mapResultsToPlaylist(
+                    results.getInt("id"),
+                    results.getString("name"),
+                    results.getInt("length"),
+                    results.getString("owner_token"),
+                    token));
         }
         return playlists;
     }
 
-    private Playlist mapResultsToPlaylist(int playlistId, String name) {
+    private Playlist mapResultsToPlaylist(int playlistId, String name, int length, String ownerToken, String token) {
         Playlist playlist = new Playlist();
         playlist.setId(playlistId);
         playlist.setName(name);
-        playlist.setOwner(true);
+        playlist.setLength(length);
         playlist.setTracks(getTracksInPlaylist(playlistId));
+
+        if (token.equals(ownerToken)) {
+            playlist.setOwner(true);
+        } else {
+            playlist.setOwner(false);
+        }
+
         return playlist;
     }
 
@@ -64,7 +75,7 @@ public class PlaylistDAO extends DAOSetup {
         return tracksInPlaylist.stream().mapToInt(i->i).toArray();
     }
 
-    public void addNewPlaylistOnToken(String token, String name) {
+    public void addNewPlaylist(String token, String name) {
         try {
             prepareStmt("INSERT INTO playlists (name, owner_token, length) VALUES (?, ?, 0)");
             stmt.setString(1, name);
@@ -77,7 +88,7 @@ public class PlaylistDAO extends DAOSetup {
         }
     }
 
-    public void updatePlaylistOnToken(int id, String token, String name) {
+    public void updatePlaylist(int id, String token, String name) {
         try {
             prepareStmt("UPDATE playlists SET name = ? WHERE id = ? AND owner_token = ?");
             stmt.setString(1, name);
@@ -91,7 +102,7 @@ public class PlaylistDAO extends DAOSetup {
         }
     }
 
-    public void deletePlaylistOnToken(int id, String token) {
+    public void deletePlaylist(int id, String token) {
         try {
             prepareStmt("DELETE FROM playlists WHERE id = ? AND owner_token = ?");
             stmt.setInt(1, id);

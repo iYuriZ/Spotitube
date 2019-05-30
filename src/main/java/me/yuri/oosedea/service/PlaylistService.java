@@ -21,21 +21,29 @@ public class PlaylistService {
         if(!authorized) {
             loginService.authorizeByToken(token);
         }
-        return playlistDAO.findAllPlaylistsByToken(token);
+        return playlistDAO.findAllPlaylists(token);
+    }
+
+    public int getTotalLength(List<Playlist> playlists) {
+        int totalLength = 0;
+        for (Playlist playlist : playlists) {
+            totalLength += playlist.getLength();
+        }
+        return totalLength;
     }
 
     public List<Playlist> addNewPlaylist(String token, String name) throws UnauthorizedUserException {
-        playlistDAO.addNewPlaylistOnToken(token, name);
+        playlistDAO.addNewPlaylist(token, name);
         return this.getAllPlaylists(token, true);
     }
 
     public List<Playlist> renamePlaylist(int id, String token, String name) throws UnauthorizedUserException {
-        playlistDAO.updatePlaylistOnToken(id, token, name);
+        playlistDAO.updatePlaylist(id, token, name);
         return this.getAllPlaylists(token, true);
     }
 
     public List<Playlist> deletePlaylist(int id, String token) throws UnauthorizedUserException {
-        playlistDAO.deletePlaylistOnToken(id, token);
+        playlistDAO.deletePlaylist(id, token);
         return this.getAllPlaylists(token, true);
     }
 }
