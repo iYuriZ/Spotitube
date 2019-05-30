@@ -9,19 +9,6 @@
     <list default="true" id="cc34c9ad-bae7-4bc1-ba51-d747658f57e5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/DAOSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/DAOSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/PlaylistDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/PlaylistDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/TrackDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/TrackDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/userDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/userDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/me/yuri/oosedea/datasource/DAOSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/me/yuri/oosedea/datasource/DAOSetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/me/yuri/oosedea/service/DatabaseConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/yuri/oosedea/datasource/DAOSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/yuri/oosedea/datasource/DAOSetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/yuri/oosedea/service/DatabaseConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/me/yuri/oosedea/dao/PlaylistDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/me/yuri/oosedea/dao/PlaylistDAOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/me/yuri/oosedea/dao/TrackDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/me/yuri/oosedea/dao/TrackDAOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/me/yuri/oosedea/dao/userDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/me/yuri/oosedea/dao/userDAOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/me/yuri/oosedea/rest/LoginControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/me/yuri/oosedea/rest/LoginControllerTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -84,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="387">
-              <caret line="28" column="113" lean-forward="true" selection-start-line="28" selection-start-column="113" selection-end-line="28" selection-end-column="113" />
+              <caret line="28" column="113" selection-start-line="28" selection-start-column="113" selection-end-line="28" selection-end-column="113" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,14 +103,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/DAOSetup.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
@@ -207,7 +203,6 @@
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/service/PlaylistServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/service/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/service/DatabaseConnectionTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/TrackControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/rest/PlaylistControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/modelobjects/PlaylistTest.java" />
@@ -218,6 +213,7 @@
         <option value="$PROJECT_DIR$/src/test/java/me/yuri/oosedea/dao/PlaylistDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/DAOSetup.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -236,8 +232,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1454" />
-    <option name="y" value="-31" />
+    <option name="x" value="-1520" />
+    <option name="y" value="-34" />
     <option name="width" value="1229" />
     <option name="height" value="659" />
   </component>
@@ -383,7 +379,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559244070140" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559250888931" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -637,7 +633,7 @@
       <workItem from="1559117292882" duration="133000" />
       <workItem from="1559141171487" duration="736000" />
       <workItem from="1559153730418" duration="14649000" />
-      <workItem from="1559204969610" duration="19506000" />
+      <workItem from="1559204969610" duration="21350000" />
     </task>
     <servers />
   </component>
@@ -674,11 +670,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122010000" />
+    <option name="totallyTimeSpent" value="123854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2595949" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -973,13 +968,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/me/yuri/oosedea/service/DatabaseConnectionTest.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/dto/implementation/PlaylistResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1126,7 +1114,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/rest/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
-          <caret line="28" column="113" lean-forward="true" selection-start-line="28" selection-start-column="113" selection-end-line="28" selection-end-column="113" />
+          <caret line="28" column="113" selection-start-line="28" selection-start-column="113" selection-end-line="28" selection-end-column="113" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1166,10 +1154,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/me/yuri/oosedea/datasource/DAOSetup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>

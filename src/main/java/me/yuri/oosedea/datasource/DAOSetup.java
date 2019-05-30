@@ -17,7 +17,7 @@ public abstract class DAOSetup {
 
     protected void prepareStmt(String s) throws SQLException, IOException {
         connection = db.getDBConnection();
-        stmt = connection.prepareStatement(sgit);
+        stmt = connection.prepareStatement(s);
     }
 
     protected ResultSet getResultSet() throws SQLException {
