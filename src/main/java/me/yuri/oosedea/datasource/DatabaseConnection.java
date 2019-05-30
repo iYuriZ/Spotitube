@@ -1,4 +1,4 @@
-package me.yuri.oosedea.service;
+package me.yuri.oosedea.datasource;
 
 import java.io.IOException;
 import java.io.InputStream;

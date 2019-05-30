@@ -2,7 +2,7 @@ package me.yuri.oosedea.dao;
 
 import me.yuri.oosedea.datasource.dao.UserDAO;
 import me.yuri.oosedea.modelobjects.User;
-import me.yuri.oosedea.service.DatabaseConnection;
+import me.yuri.oosedea.datasource.DatabaseConnection;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,7 +1,5 @@
 package me.yuri.oosedea.datasource;
 
-import me.yuri.oosedea.service.DatabaseConnection;
-
 import javax.inject.Inject;
 import java.io.IOException;
 import java.sql.Connection;
@@ -19,7 +17,7 @@ public abstract class DAOSetup {
 
     protected void prepareStmt(String s) throws SQLException, IOException {
         connection = db.getDBConnection();
-        stmt = connection.prepareStatement(s);
+        stmt = connection.prepareStatement(sgit);
     }
 
     protected ResultSet getResultSet() throws SQLException {
