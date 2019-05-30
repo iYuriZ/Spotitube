@@ -63,7 +63,7 @@ public class LoginControllerTest {
     }
 
     @Test
-    public void testLoginWithWrongUserThrowsException() throws UnauthorizedUserException {
+    public void testLoginWithWrongUserReturnsUnauthorized() throws UnauthorizedUserException {
         loginRequest.setUser("user");
         loginRequest.setPassword("password");
 

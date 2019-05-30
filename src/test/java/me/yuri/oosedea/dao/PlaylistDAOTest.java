@@ -1,6 +1,7 @@
 package me.yuri.oosedea.dao;
 
 import me.yuri.oosedea.datasource.dao.PlaylistDAO;
+import me.yuri.oosedea.exceptions.UnauthorizedUserException;
 import me.yuri.oosedea.modelobjects.Playlist;
 import me.yuri.oosedea.service.DatabaseConnection;
 import org.junit.Assert;
