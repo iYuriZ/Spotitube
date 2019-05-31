@@ -12,14 +12,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/login")
+@RequestMapping("login")
 @Controller
 public class LoginController extends Responses {
 
     @Autowired
     private LoginService loginService;
 
-    @PostMapping
+    @PostMapping("")
     public ResponseEntity login(LoginRequest loginRequest) {
         try {
             User user = loginService.authenticate(loginRequest.getUser(), loginRequest.getPassword());

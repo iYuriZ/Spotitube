@@ -1,5 +1,7 @@
 package me.yuri.oosedea.datasource;
 
+import org.springframework.stereotype.Repository;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -8,6 +10,7 @@ import java.util.Properties;
 
 import static java.sql.DriverManager.getConnection;
 
+@Repository
 public class DatabaseConnection {
 
     public DatabaseConnection() {}

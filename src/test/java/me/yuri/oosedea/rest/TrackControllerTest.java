@@ -12,8 +12,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.http.ResponseEntity;
 
-import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,13 +39,13 @@ public class TrackControllerTest {
 
         Mockito.when(trackService.getAllTracksNotInPlaylist(1, token)).thenReturn(new ArrayList<>());
 
-        Response expected = Response.ok(response).build();
-        Response actual = trackController.getAllTracksNotInPlaylist(1, token);
+        ResponseEntity expected = ResponseEntity.status(200).body(response);
+        ResponseEntity actual = trackController.getAllTracksNotInPlaylist(1, token);
 
         List<Track> expectedList = new ArrayList<>();
         List<Track> actualList = response.getTracks();
 
         Assert.assertEquals(expectedList, actualList);
-        Assert.assertEquals(expected.getStatus(), actual.getStatus());
+        Assert.assertEquals(expected.getStatusCode(), actual.getStatusCode());
     }
 }

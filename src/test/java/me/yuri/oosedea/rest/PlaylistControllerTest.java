@@ -17,8 +17,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.http.ResponseEntity;
 
-import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,8 +53,8 @@ public class PlaylistControllerTest {
 
         Mockito.when(playlistService.getAllPlaylists(token, false)).thenReturn(new ArrayList<>());
 
-        Response expected = Response.ok(response).build();
-        Response actual = playlistController.requestAllPlaylists(token);
+        ResponseEntity expected = ResponseEntity.status(200).body(response);
+        ResponseEntity actual = playlistController.requestAllPlaylists(token);
 
         List<Playlist> expectList = new ArrayList<>();
         List<Playlist> actualList = response.getPlaylists();
@@ -64,7 +64,7 @@ public class PlaylistControllerTest {
 
         Assert.assertEquals(expectedLength, actualLength);
         Assert.assertEquals(expectList, actualList);
-        Assert.assertEquals(expected.getStatus(), actual.getStatus());
+        Assert.assertEquals(expected.getStatusCode(), actual.getStatusCode());
     }
 
     @Test
@@ -87,10 +87,10 @@ public class PlaylistControllerTest {
 
         Mockito.when(playlistService.addNewPlaylist(token, "Rock")).thenReturn(playlists);
 
-        Response expected = Response.status(201).entity(response).build();
-        Response actual = playlistController.addNewPlaylist(token, playlistRequest);
+        ResponseEntity expected = ResponseEntity.status(201).body(response);
+        ResponseEntity actual = playlistController.addNewPlaylist(token, playlistRequest);
 
-        Assert.assertEquals(expected.getStatus(), actual.getStatus());
+        Assert.assertEquals(expected.getStatusCode(), actual.getStatusCode());
     }
 
     @Test
@@ -114,10 +114,10 @@ public class PlaylistControllerTest {
 
         Mockito.when(playlistService.renamePlaylist(1, token, "Rock")).thenReturn(playlists);
 
-        Response expected = Response.status(201).entity(response).build();
-        Response actual = playlistController.renamePlaylist(token, playlistRequest);
+        ResponseEntity expected = ResponseEntity.status(201).body(response);
+        ResponseEntity actual = playlistController.renamePlaylist(token, playlistRequest);
 
-        Assert.assertEquals(expected.getStatus(), actual.getStatus());
+        Assert.assertEquals(expected.getStatusCode(), actual.getStatusCode());
     }
 
     @Test
@@ -127,10 +127,10 @@ public class PlaylistControllerTest {
 
         Mockito.when(playlistService.deletePlaylist(1, token)).thenReturn(playlists);
 
-        Response expected = Response.ok(response).build();
-        Response actual = playlistController.deletePlaylist(token, 1);
+        ResponseEntity expected = ResponseEntity.status(200).body(response);
+        ResponseEntity actual = playlistController.deletePlaylist(token, 1);
 
-        Assert.assertEquals(expected.getStatus(), actual.getStatus());
+        Assert.assertEquals(expected.getStatusCode(), actual.getStatusCode());
     }
 
     @Test
@@ -140,10 +140,10 @@ public class PlaylistControllerTest {
 
         Mockito.when(trackService.getAllTracksInPlaylist(1, token, false)).thenReturn(tracks);
 
-        Response expected = Response.ok(response).build();
-        Response actual = playlistController.getAllTracksInPlaylist(token, 1);
+        ResponseEntity expected = ResponseEntity.status(200).body(response);
+        ResponseEntity actual = playlistController.getAllTracksInPlaylist(token, 1);
 
-        Assert.assertEquals(expected.getStatus(), actual.getStatus());
+        Assert.assertEquals(expected.getStatusCode(), actual.getStatusCode());
     }
 
     @Test
@@ -176,10 +176,10 @@ public class PlaylistControllerTest {
 
         Mockito.when(trackService.addTrackToPlaylist(1, 1, true, token)).thenReturn(tracks);
 
-        Response expected = Response.status(201).entity(response).build();
-        Response actual = playlistController.addTrackToPlaylist(token, 1, trackRequest);
+        ResponseEntity expected = ResponseEntity.status(201).body(response);
+        ResponseEntity actual = playlistController.addTrackToPlaylist(token, 1, trackRequest);
 
-        Assert.assertEquals(expected.getStatus(), actual.getStatus());
+        Assert.assertEquals(expected.getStatusCode(), actual.getStatusCode());
     }
 
     @Test
@@ -189,9 +189,9 @@ public class PlaylistControllerTest {
 
         Mockito.when(trackService.removeTrackFromPlaylist(1, 1, token)).thenReturn(tracks);
 
-        Response expected = Response.ok(response).build();
-        Response actual = playlistController.removeTrackFromPlaylist(token, 1, 1);
+        ResponseEntity expected = ResponseEntity.status(200).body(response);
+        ResponseEntity actual = playlistController.removeTrackFromPlaylist(token, 1, 1);
 
-        Assert.assertEquals(expected.getStatus(), actual.getStatus());
+        Assert.assertEquals(expected.getStatusCode(), actual.getStatusCode());
     }
 }

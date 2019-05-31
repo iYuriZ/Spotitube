@@ -13,8 +13,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
-
-import javax.ws.rs.core.Response;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LoginControllerTest {
@@ -48,8 +48,8 @@ public class LoginControllerTest {
 
         Mockito.when(loginService.authenticate("dennis", "dennis")).thenReturn(user);
 
-        Response actual = loginController.login(loginRequest);
-        Response expected = Response.ok(loginResponse).build();
+        ResponseEntity actual = loginController.login(loginRequest);
+        ResponseEntity expected = ResponseEntity.status(200).body(loginResponse);
 
         String expectedUser = "Dennis Breuker";
         String actualUser = loginResponse.getUser();
@@ -59,7 +59,7 @@ public class LoginControllerTest {
 
         Assert.assertEquals(expectedUser, actualUser);
         Assert.assertEquals(expectedToken, actualToken);
-        Assert.assertEquals(expected.getStatus(), actual.getStatus());
+        Assert.assertEquals(expected.getStatusCode(), actual.getStatusCode());
     }
 
     @Test
@@ -69,7 +69,7 @@ public class LoginControllerTest {
 
         Mockito.when(loginService.authenticate("user", "password")).thenThrow(UnauthorizedUserException.class);
 
-        Response actual = loginController.login(loginRequest);
-        Assert.assertEquals(401, actual.getStatus());
+        ResponseEntity actual = loginController.login(loginRequest);
+        Assert.assertEquals(HttpStatus.UNAUTHORIZED, actual.getStatusCode());
     }
 }

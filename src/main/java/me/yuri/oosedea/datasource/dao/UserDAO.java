@@ -2,11 +2,13 @@ package me.yuri.oosedea.datasource.dao;
 
 import me.yuri.oosedea.datasource.DAOSetup;
 import me.yuri.oosedea.modelobjects.User;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+@Repository
 public class UserDAO extends DAOSetup {
 
     public User findUserByUsername(String userName) {
