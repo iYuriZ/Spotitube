@@ -2,6 +2,7 @@ package me.yuri.oosedea.datasource.dao;
 
 import me.yuri.oosedea.datasource.DAOSetup;
 import me.yuri.oosedea.modelobjects.Playlist;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -9,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class PlaylistDAO extends DAOSetup {
 
     public List<Playlist> findAllPlaylists(String token) {

@@ -5,16 +5,18 @@ import me.yuri.oosedea.exceptions.UnauthorizedUserException;
 import me.yuri.oosedea.modelobjects.Track;
 import me.yuri.oosedea.service.LoginService;
 import me.yuri.oosedea.service.TrackService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import javax.inject.Inject;
 import java.util.List;
 
+@Service
 public class TrackServiceImpl implements TrackService {
 
-    @Inject
+    @Autowired
     private TrackDAO trackDAO;
 
-    @Inject
+    @Autowired
     private LoginService loginService;
 
     @Override

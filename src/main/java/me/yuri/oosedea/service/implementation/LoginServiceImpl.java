@@ -4,14 +4,15 @@ import me.yuri.oosedea.datasource.dao.UserDAO;
 import me.yuri.oosedea.modelobjects.User;
 import me.yuri.oosedea.exceptions.UnauthorizedUserException;
 import me.yuri.oosedea.service.LoginService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import javax.inject.Inject;
-
+@Service
 public class LoginServiceImpl implements LoginService {
 
     public LoginServiceImpl() {}
 
-    @Inject
+    @Autowired
     private UserDAO userDAO;
 
     @Override

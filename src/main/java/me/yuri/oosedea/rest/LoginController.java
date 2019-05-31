@@ -6,24 +6,21 @@ import me.yuri.oosedea.rest.dto.implementation.LoginRequest;
 import me.yuri.oosedea.rest.dto.implementation.LoginResponse;
 import me.yuri.oosedea.service.LoginService;
 
-import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@Path("/login")
+@RequestMapping("/login")
+@Controller
 public class LoginController extends Responses {
 
-    @Inject
+    @Autowired
     private LoginService loginService;
 
-    @POST
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response login(LoginRequest loginRequest) {
+    @PostMapping
+    public ResponseEntity login(LoginRequest loginRequest) {
         try {
             User user = loginService.authenticate(loginRequest.getUser(), loginRequest.getPassword());
             LoginResponse response = new LoginResponse(user.getFirstName(), user.getLastName(), user.getToken());

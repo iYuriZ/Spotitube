@@ -2,21 +2,20 @@ package me.yuri.oosedea.rest;
 
 import me.yuri.oosedea.exceptions.UnauthorizedUserException;
 import me.yuri.oosedea.rest.dto.DTO;
-
-import javax.ws.rs.core.Response;
+import org.springframework.http.ResponseEntity;
 
 abstract class Responses {
 
-    Response respondOk(DTO response) {
-        return Response.ok(response).build();
+    ResponseEntity respondOk(DTO response) {
+        return ResponseEntity.status(200).body(response);
     }
 
-    Response respondCreated(DTO response) {
-        return Response.status(201).entity(response).build();
+    ResponseEntity respondCreated(DTO response) {
+        return ResponseEntity.status(201).body(response);
     }
 
-    Response respondUnauthorized(UnauthorizedUserException e) {
-        return Response.status(401).entity(e).build();
+    ResponseEntity respondUnauthorized(UnauthorizedUserException e) {
+        return ResponseEntity.status(401).body(e);
     }
 
 }

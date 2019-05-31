@@ -4,22 +4,25 @@ import me.yuri.oosedea.exceptions.UnauthorizedUserException;
 import me.yuri.oosedea.modelobjects.Track;
 import me.yuri.oosedea.rest.dto.implementation.TracksListResponse;
 import me.yuri.oosedea.service.TrackService;
-import javax.inject.Inject;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.List;
 
-@Path("/tracks")
+@RequestMapping("/tracks")
+@Controller
 public class TrackController extends Responses {
 
-    @Inject
+    @Autowired
     TrackService trackService;
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response getAllTracksNotInPlaylist(@QueryParam("forPlaylist") int playlistId, @QueryParam("token") String token) throws UnauthorizedUserException {
+    @GetMapping("")
+    public ResponseEntity getAllTracksNotInPlaylist(@RequestParam("forPlaylist") int playlistId, @RequestParam("token") String token)
+            throws UnauthorizedUserException {
         List<Track> tracks = trackService.getAllTracksNotInPlaylist(playlistId, token);
         TracksListResponse response = new TracksListResponse(tracks);
         return respondOk(response);
