@@ -12,11 +12,13 @@ import me.yuri.oosedea.service.TrackService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RequestMapping("/playlists")
+@Controller
 public class PlaylistController extends Responses {
 
     @Autowired
